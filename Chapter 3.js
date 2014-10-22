@@ -43,3 +43,23 @@ function countBs(x){
 }
 
 console.log(countBs("BBC"));
+
+function countChar(x, y){
+	var counter = 0;
+	var x_array = x.split("");
+	function logArrayElements(element, index, array){
+		// console.log(index + ": " + element );
+		if(element == y){
+			// console.log("true");
+			counter+=1;
+			// console.log("Number of uppercase Bs: " + counter);
+
+		}else{
+			// console.log("false");
+		}
+	}
+	x_array.forEach(logArrayElements);
+	console.log("Number of " + y + ": " + counter);
+}
+
+console.log(countChar("kakkerlak", "k"));
