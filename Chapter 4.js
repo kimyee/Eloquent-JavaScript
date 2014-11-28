@@ -29,7 +29,7 @@ function display(start, end, step){
 		for(var x = start; x <= end; x++){
 			numList.push(x);
 		}
-		console.log(numList);
+		// console.log(numList);
 
 		for(var i = 0; i < end; i = i + step){
 			revisedNumList.push(numList[i]);
@@ -38,5 +38,5 @@ function display(start, end, step){
 	}
 }
 
-// display(1, 10, 2)
+display(1, 10, 2)
 display(5, 2, -1)
