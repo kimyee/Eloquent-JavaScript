@@ -20,15 +20,23 @@ function display(start, end, step){
 	var numList = [];
 	var i = 0;
 	var revisedNumList = [];
-	for(var x = start; x <= end; x++){
-		numList.push(x);
-	}
-	for(var i=0; i<10; i=i+step){
-		revisedNumList.push(numList[i]);
-	}
-	console.log(numList);
-	console.log(revisedNumList);
+	if(end < start){
+		for(var x = start; x >= end; x--){
+			numList.push(x);
+		}
+		console.log(numList);
+	}else{
+		for(var x = start; x <= end; x++){
+			numList.push(x);
+		}
+		console.log(numList);
 
+		for(var i = 0; i < end; i = i + step){
+			revisedNumList.push(numList[i]);
+		}
+		console.log(revisedNumList);
+	}
 }
 
-display(1, 10, 2)
+// display(1, 10, 2)
+display(5, 2, -1)
