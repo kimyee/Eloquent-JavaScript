@@ -45,7 +45,6 @@ display(5, 2, -1)
 
 //Reversing an array
 function reverseArray(array){
-	var maxIndex = array.length-1;
 	var newArray = [];
 	// console.log(array);
 	for(var maxIndex = array.length-1; maxIndex > -1; maxIndex--){
