@@ -44,14 +44,29 @@ display(1, 10, 2)
 display(5, 2, -1)
 
 //Reversing an array
-function reverseArray(array){
+function reverseArrayInPlace(arrayValue){
 	var newArray = [];
 	// console.log(array);
-	for(var maxIndex = array.length-1; maxIndex > -1; maxIndex--){
-		newArray.push(array[maxIndex]);
+	for(var maxIndex = arrayValue.length-1; maxIndex > -1; maxIndex--){
+		newArray.push(arrayValue[maxIndex]);
 	}
 	console.log(newArray);
+	console.log("--------------------------------------");
 
 }
 
+reverseArrayInPlace(["A", "B", "C"])
+
+function reverseArray(array){
+	var popValue = array.pop();
+	console.log(array);
+	console.log(popValue);
+	array.unshift(popValue);
+	console.log(array);
+
+
+
+
+}
 reverseArray(["A", "B", "C"])
+
