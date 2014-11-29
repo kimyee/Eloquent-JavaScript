@@ -25,6 +25,7 @@ function display(start, end, step){
 			numList.push(x);
 		}
 		console.log(numList);
+		console.log("--------------------------------------");
 	}else{
 		for(var x = start; x <= end; x++){
 			numList.push(x);
@@ -35,8 +36,23 @@ function display(start, end, step){
 			revisedNumList.push(numList[i]);
 		}
 		console.log(revisedNumList);
+		console.log("--------------------------------------");
 	}
 }
 
 display(1, 10, 2)
 display(5, 2, -1)
+
+//Reversing an array
+function reverseArray(array){
+	var maxIndex = array.length-1;
+	var newArray = [];
+	// console.log(array);
+	for(var maxIndex = array.length-1; maxIndex > -1; maxIndex--){
+		newArray.push(array[maxIndex]);
+	}
+	console.log(newArray);
+
+}
+
+reverseArray(["A", "B", "C"])
