@@ -43,30 +43,26 @@ function display(start, end, step){
 display(1, 10, 2)
 display(5, 2, -1)
 
-//Reversing an array
-function reverseArrayInPlace(arrayValue){
+
+//Reversing an array using a new array
+function reverseArray(array){
 	var newArray = [];
 	// console.log(array);
-	for(var maxIndex = arrayValue.length-1; maxIndex > -1; maxIndex--){
-		newArray.push(arrayValue[maxIndex]);
+	for(var maxIndex = array.length-1; maxIndex > -1; maxIndex--){
+		newArray.push(array[maxIndex]);
 	}
 	console.log(newArray);
 	console.log("--------------------------------------");
-
-}
-
-reverseArrayInPlace(["A", "B", "C"])
-
-function reverseArray(array){
-	var popValue = array.pop();
-	console.log(array);
-	console.log(popValue);
-	array.unshift(popValue);
-	console.log(array);
-
-
-
-
 }
 reverseArray(["A", "B", "C"])
+
+//Reversing an array without using a new array
+var arrayValue = [1, 2, 3, 4, 5];
+for(i = 1; i < arrayValue.length; i++){
+	// console.log(arrayValue);
+	arrayValue.unshift(arrayValue[i]);
+	arrayValue.splice(i+1, 1);
+}
+console.log(arrayValue);
+
 
