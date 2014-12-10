@@ -58,11 +58,7 @@ reverseArray(["A", "B", "C"])
 
 //Reversing an array without using a new array
 var arrayValue = [1, 2, 3, 4, 5];
-for(i = 1; i < arrayValue.length; i++){
-	// console.log(arrayValue);
-	arrayValue.unshift(arrayValue[i]);
-	arrayValue.splice(i+1, 1);
-}
+arrayValue.sort(function (a, b){
+	return b - a ;
+});
 console.log(arrayValue);
-
-
